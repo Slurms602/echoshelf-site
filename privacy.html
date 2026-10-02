@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EchoShelf Privacy Policy</title>
+  <meta name="description" content="How EchoShelf handles your data, including the Google Drive data used for progress sync.">
+  <meta name="theme-color" content="#080a18">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="wrap nav">
+    <a class="brand" href="./"><img src="icon.png" alt="">EchoShelf</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="./#features">Features</a>
+      <a href="./#sync">Sync</a>
+      <a href="./#themes">Themes</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <article class="prose">
+      <span class="kicker">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective October 2, 2026</p>
+
+      <div class="callout">
+        <strong>The short version:</strong> EchoShelf runs on your devices. Its developer operates no
+        servers and collects nothing. If you turn on Google Drive sync, EchoShelf stores a small
+        progress file in a hidden folder in <em>your own</em> Google Drive, which only EchoShelf
+        can access.
+      </div>
+
+      <p>This policy covers the EchoShelf audiobook player for Windows and Android (“EchoShelf”,
+      “the app”). It explains what data the app handles, where that data is kept, and how you
+      can remove it.</p>
+
+      <h2>Data stored on your device</h2>
+      <p>To work as an audiobook player, EchoShelf keeps the following on your device only:</p>
+      <ul>
+        <li>your library: the folders you add, book titles, authors, covers, chapters and file locations;</li>
+        <li>listening progress, bookmarks, notes and character notes you create;</li>
+        <li>your settings, and an anonymous random device ID used to tell your devices apart when syncing.</li>
+      </ul>
+      <p>On Windows this lives in <code>%LOCALAPPDATA%\EchoShelf</code>; on Android it lives in the
+      app's private storage. None of it is sent to the developer or to any third party.</p>
+
+      <h2>Google Drive sync (optional)</h2>
+      <p>Sync is off until you choose <strong>Connect</strong> and sign in with Google. EchoShelf
+      then requests a single permission:</p>
+      <table>
+        <thead><tr><th>Permission</th><th>What it allows</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>https://www.googleapis.com/auth/drive.appdata</code></td>
+            <td>Create, read, update and delete EchoShelf's own files in a hidden application data
+            folder in your Google Drive. It does <strong>not</strong> allow EchoShelf to see, open or
+            change any of your other Drive files.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Each of your devices writes one small file to that folder. It contains:</p>
+      <ul>
+        <li>the device's random ID, its name (for example your PC's computer name or phone model,
+        so the app can say “picked up from Pixel”) and platform (Windows or Android);</li>
+        <li>for each book: a fingerprint computed from the audio content, your position, the
+        book's length, whether you finished it, and when it was last updated.</li>
+      </ul>
+      <p>It does <strong>not</strong> contain book titles, authors, file names, folder paths, covers,
+      bookmarks, notes or any audio.</p>
+
+      <h3>How this data is used</h3>
+      <p>EchoShelf reads the progress files written by your other devices only to move a book to
+      the position you most recently listened to, and to show you which device it came from. The
+      data is used for nothing else.</p>
+
+      <h3>Where it is stored and who can see it</h3>
+      <p>The files are stored in your Google account, under Google's own terms and security. They
+      travel directly between your devices and Google over encrypted HTTPS connections. The
+      developer has no access to your Google account, your Drive, or these files, and runs no
+      server that receives them.</p>
+
+      <h3>Sign-in tokens</h3>
+      <p>After you sign in, Google gives the app a token so it can keep syncing without asking
+      again. On Windows it is stored encrypted for your Windows user account (Windows DPAPI) in
+      <code>%LOCALAPPDATA%\EchoShelf</code>. On Android, sign-in is handled by Google Play
+      services. Tokens never leave your device except when sent to Google to authorize requests.</p>
+
+      <h2>Sharing, selling and advertising</h2>
+      <p>EchoShelf does not sell, rent, share or transfer your data to anyone. It contains no
+      advertising, no analytics and no tracking, and it does not use your data to train AI or
+      machine-learning models.</p>
+
+      <h2>Limited Use disclosure</h2>
+      <p>EchoShelf's use and transfer of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API
+      Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+      <h2>Self-hosted sync (advanced)</h2>
+      <p>EchoShelf also has an optional, advanced setting to sync with a server that you run
+      yourself. If you use it, your progress goes to the server address you entered, and that
+      server's owner (you) is responsible for it. It is off by default.</p>
+
+      <h2>Deleting your data</h2>
+      <ul>
+        <li><strong>Stop syncing:</strong> in EchoShelf, open Settings and choose
+        <strong>Disconnect</strong> on each device. This revokes the app's access at Google and
+        deletes the stored token. You can also remove access at
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+        <li><strong>Delete synced progress:</strong> open
+        <a href="https://drive.google.com/">Google Drive</a> → Settings → Manage apps → EchoShelf →
+        Options → <strong>Delete hidden app data</strong>.</li>
+        <li><strong>Delete local data:</strong> uninstall the app. On Windows, also delete the
+        <code>%LOCALAPPDATA%\EchoShelf</code> folder if you want to remove your library and settings.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>EchoShelf is a general-audience app. It does not knowingly collect personal information
+      from anyone, including children.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the updated version will be posted on this page with a new
+      effective date. Changes will never reduce the protections above without your consent.</p>
+
+      <h2>Contact</h2>
+      <p>Questions or requests about privacy can be sent by opening an issue at
+      <a href="https://github.com/Slurms602/echoshelf-site/issues">github.com/Slurms602/echoshelf-site/issues</a>.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 EchoShelf. A personal project, shared with friends.</span>
+      <nav aria-label="Footer">
+        <a href="./">Home</a>
+        <a href="https://github.com/Slurms602/echoshelf-site/issues">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
